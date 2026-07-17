@@ -13,19 +13,19 @@ RUN mvn package
 # #
 # # Run
 # #
-FROM openjdk:8u212-jre-alpine3.9
+# FROM openjdk:8u212-jre-alpine3.9
 
 
-EXPOSE 8080
+# EXPOSE 8080
 
-WORKDIR /opt/shipping
+# WORKDIR /opt/shipping
 
-ENV CART_ENDPOINT=cart:8080
-ENV DB_HOST=mysql
+# ENV CART_ENDPOINT=cart:8080
+# ENV DB_HOST=mysql
 
-COPY --from=sudheer /opt/shipping/target/shipping-1.0.jar shipping.jar
+# COPY --from=sudheer /opt/shipping/target/shipping-1.0.jar shipping.jar
 
-CMD [ "java", "-Xmn256m", "-Xmx768m", "-jar", "shipping.jar" ]
+# CMD [ "java", "-Xmn256m", "-Xmx768m", "-jar", "shipping.jar" ]
 
 # # FROM maven AS build
 
